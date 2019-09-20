@@ -23,18 +23,18 @@ int main()
     t = clock();
     fun();
     t = clock() - t;
-    double time_taken = ((double)t)/CLOCKS_PER_SEC;
-    printf("function fun() took %f sec to execute \n", time_taken);
+    double time_taken1 = ((double)t)/CLOCKS_PER_SEC;
+    printf("function fun() took %f sec to execute \n", time_taken1);
     //Directly running the loop
     t = clock();
-    for(int j = 0; i<=1000; j++);
+    for(int j = 0; j<=1000; j++);
     t = clock() - t;
-    double time_taken = ((double)t)/CLOCKS_PER_SEC;
-    printf("loop took %f sec to execute \n", time_taken);
+    double time_taken2 = ((double)t)/CLOCKS_PER_SEC;
+    printf("loop took %f sec to execute \n", time_taken2);
     //calling a recursive function.
     t = clock();
     int a = rec(0);
     t = clock() - t;
-    double time_taken = ((double)t)/CLOCKS_PER_SEC;
-    printf("loop took %f sec to execute \n", time_taken);
+    double time_taken3 = ((double)t)/CLOCKS_PER_SEC;
+    printf("loop took %f sec to execute \n", time_taken3);
 }
