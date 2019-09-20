@@ -1,6 +1,7 @@
 // C program to generate random numbers
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
  
 // Driver program
 int main(void)
@@ -18,8 +19,8 @@ int main(void)
     }
     printf("enter number of element in random file\n");
     scanf("%d",&n);
+    srand(time(NULL)); 
     for (i = 0; i < n; i++) {
- 
         // to generate number less than n
         int val = rand() % n;
  
@@ -29,7 +30,7 @@ int main(void)
  
     // closing the file
     fclose(fptr);
-    printf("numbers generated successfully !! ");
+    printf("numbers generated successfully !!\n");
     return 0;
 }
 //end
