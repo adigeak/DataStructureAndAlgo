@@ -1,2 +1,2 @@
 # DataStructureAndAlgo
-This repository is made to compare the complexity of various algo and data structure
+This repository is made to compare the time complexity of various type of algorithm and data structure
