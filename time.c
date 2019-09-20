@@ -7,11 +7,19 @@ void fun()
     for(int i = 0; i<=1000; i++);
 }
 
+int rec(int i)
+{
+    if(i>=1000)
+        return 0;
+    else
+        rec(i++);
+}
+
 int main()
 {
-    // Calculate the time taken by fun()
+    // Calculate the time taken by function
     clock_t t;
-    //calling a function.
+    //calling a normal function.
     t = clock();
     fun();
     t = clock() - t;
@@ -20,6 +28,12 @@ int main()
     //Directly running the loop
     t = clock();
     for(int j = 0; i<=1000; j++);
+    t = clock() - t;
+    double time_taken = ((double)t)/CLOCKS_PER_SEC;
+    printf("loop took %f sec to execute \n", time_taken);
+    //calling a recursive function.
+    t = clock();
+    int a = rec(0);
     t = clock() - t;
     double time_taken = ((double)t)/CLOCKS_PER_SEC;
     printf("loop took %f sec to execute \n", time_taken);
