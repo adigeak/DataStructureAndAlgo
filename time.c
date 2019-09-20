@@ -9,10 +9,10 @@ void fun()
 
 int rec(int i)
 {
-    if(i>=1000)
+    if(i==1000)
         return 0;
     else
-        rec(i++);
+        rec(++i);
 }
 
 int main()
